@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -123,7 +124,7 @@ STATIC_URL = "/static/"
 STATIC_FILE_ROOT = BASE_DIR / "static"
 STATICFILES_DIRS = ((BASE_DIR / "static"),)
 STATIC_ROOT = BASE_DIR / "assets"
-
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
