@@ -1,22 +1,21 @@
 
-## Clone 
+### Clone 
 
+```
+https://github.com/mubashir-cvr/Django-Simple-Blog.git
 ```
 
 
-```
+#### Activate Virtual Environment
 
 
-### Activate Virtual Environment
-
-
-## Install Requirements
+### Install Requirements
 
 ```
 pip install -r requirement.txt
 
 ```
-## Install django-ckeditor
+### Install django-ckeditor
 
 ```
 pip install django-ckeditor
