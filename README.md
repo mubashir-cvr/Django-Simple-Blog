@@ -21,3 +21,25 @@ pip install -r requirement.txt
 pip install django-ckeditor
 
 ```
+
+
+###  model.py
+
+#### Import
+
+```
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
+
+```
+
+#### Use
+
+```
+class Article(models.Model):
+    author = models.ForeignKey("auth.User",on_delete = models.CASCADE,verbose_name = "Article")
+    title = models.CharField(max_length = 50,verbose_name = "Title")
+    content = RichTextField()
+    content_with_uploadImage = RichTextUploadingField()
+
+```
