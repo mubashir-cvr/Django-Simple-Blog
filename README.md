@@ -22,6 +22,16 @@ pip install django-ckeditor
 
 ```
 
+### Settings.py
+
+```
+INSTALLED_APPS = [
+    ...........
+    ...........
+    'ckeditor',
+    'ckeditor_uploader',
+]
+```
 
 ###  model.py
 
