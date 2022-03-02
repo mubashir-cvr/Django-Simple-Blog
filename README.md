@@ -22,6 +22,7 @@ pip install django-ckeditor
 
 ```
 
+
 ### Settings.py
 
 ```
@@ -31,6 +32,19 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
 ]
+```
+
+### Project urls.py
+
+```
+urlpatterns = [
+    ......
+    ......
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+    ......
+    ......
+    ]
+
 ```
 
 ###  model.py
