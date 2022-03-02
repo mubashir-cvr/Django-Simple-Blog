@@ -34,6 +34,10 @@ INSTALLED_APPS = [
 ]
 ```
 
+```
+CKEDITOR_UPLOAD_PATH = "uploads/"
+```
+
 ### Project urls.py
 
 ```
