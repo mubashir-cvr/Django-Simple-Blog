@@ -71,3 +71,40 @@ class Article(models.Model):
     content_with_uploadImage = RichTextUploadingField()
 
 ```
+
+### Customise RichTextField or RichTextUploadingField
+#### Settings.py
+
+```
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Format','Styles'],
+            ['Bold', 'Italic', 'Underline','HorizontalRule'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock','Youtube','Image'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source'],
+
+        ],
+        'extraPlugins':['youtube',],
+    }
+}
+
+```
+#### Model.py 
+
+```
+class Content(models.Model):
+    article = models.ForeignKey(Article,on_delete = models.CASCADE,verbose_name = "Article")
+    title = models.CharField(max_length = 50,verbose_name = "Title")
+    content_with_uploadImage = RichTextUploadingField(external_plugin_resources=[('youtube','/static/ckeditor_plugins/youtube/youtube/','plugin.js')])
+
+    def __str__(self):
+        return self.title
+        
+ ```
+ 
+ ##### For Youtube Plugin 
+    Download Js Packages from [here](https://ckeditor.com/cke4/addon/youtube)
+    And place in static folder and map in model field ****external_plugin_resources=[('youtube','/static/ckeditor_plugins/youtube/youtube/','plugin.js')]****
