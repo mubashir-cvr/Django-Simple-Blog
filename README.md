@@ -106,5 +106,5 @@ class Content(models.Model):
  ```
  
  ##### For Youtube Plugin 
-    Download Js Packages from [here](https://ckeditor.com/cke4/addon/youtube)
+    Download Js Packages from (here)[https://ckeditor.com/cke4/addon/youtube]
     And place in static folder and map in model field ****external_plugin_resources=[('youtube','/static/ckeditor_plugins/youtube/youtube/','plugin.js')]****
